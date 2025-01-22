@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: cg4559qnb-go-gitops
+  description: This is GitOps manifest for cg4559qnb-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: cg4559qnb-go
+    backstage.io/kubernetes-id: cg4559qnb-go 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: cg4559qnb-go   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:cg4559qnb-go
